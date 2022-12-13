@@ -1,0 +1,29 @@
+@import "SCSS";
+
+.Navbar {
+  height: 10vh;
+  width: 100vw;
+  background-color: $main-Color;
+  padding: 0 10%;
+  @include flexBox(space-between, center);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  .container {
+    width: fit-content;
+    height: 100%;
+    @include flexBox(space-evenly, center);
+    color: white;
+    cursor: pointer;
+
+    .badge {
+      right: 2vw;
+    }
+  }
+
+  .icons {
+    color: white;
+    margin: 0 1vw;
+  }
+}

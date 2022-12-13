@@ -1,0 +1,32 @@
+@mixin flexBox($justify, $align, $direction: row, $wrap: wrap) {
+  @content;
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin forMobile {
+  @media screen and (max-width: map-get($media-query , "s")) {
+    @content;
+  }
+}
+
+@mixin forTablet {
+  @media screen and (min-width: map-get($media-query , "s")) and (max-width: map-get($media-query , "m")) {
+    @content;
+  }
+}
+
+@mixin forLargeScreen {
+  @media screen and (min-width: map-get($media-query , "m")) and (max-width: map-get($media-query , "l")) {
+    @content;
+  }
+}
+
+@mixin forAllScreens {
+  @media screen and (min-width: map-get($media-query , "l")) and (max-width: map-get($media-query , "xl")) {
+    @content;
+  }
+}

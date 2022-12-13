@@ -1,0 +1,50 @@
+@import "SCSS";
+
+.formContainer {
+  width: 100vw;
+  height: 60vh;
+  margin-bottom: 10%;
+  @include flexBox(center, center);
+
+  .form {
+    height: 100%;
+    width: 45%;
+    padding: 2%;
+    @include flexBox(space-around, space-around, column, wrap);
+    box-shadow: 0px 0px 5px 0px rgba(8,8,8,0.75);
+
+    h3 {
+      color: $main-Color;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button {
+      align-self: flex-start;
+      background-color: $main-Color;
+    }
+  }
+}
+
+@include forMobile {
+  .formContainer {
+    .form {
+      width: 60%;
+    }
+  }
+}
+
+@include forTablet {
+  .formContainer {
+    .form {
+      width: 50%;
+    }
+  }
+}
+
+@include forLargeScreen {
+  .formContainer {
+    .form {
+      width: 50%;
+    }
+  }
+}

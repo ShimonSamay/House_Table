@@ -1,0 +1,8 @@
+@import "SCSS";
+
+.cardsContainer {
+  width: 100vw;
+  padding: 0 3%;
+  padding-bottom: 2%;
+  @include flexBox(space-around, initial, row, wrap);
+}

@@ -1,0 +1,48 @@
+@import "SCSS";
+
+.container {
+  width: 100vw;
+  padding: 0 3%;
+  margin-top: 3%;
+  @include flexBox(space-evenly, center);
+
+  .input {
+    width: 30vw !important;
+    border-radius: 10px;
+    border-color: $main-Color !important;
+  }
+
+  .select {
+    @extend .input
+  }
+}
+
+@include forMobile {
+  .container {
+    .input {
+      width: 80% !important;
+      margin-top: 5%;
+    }
+  }
+}
+
+@include forTablet {
+  .container {
+    .input {
+      width: 40% !important;
+      margin-top: 5%;
+    }
+  }
+}
+
+@include forLargeScreen {
+  .container {
+    .input {
+      width: 45% !important;
+      margin-top: 5%;
+    }
+  }
+}
+
+
+
